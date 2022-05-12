@@ -21,7 +21,7 @@
                         </ul>
                     </li>
                     <li class="d-block nav-item"><a href="{{route('barber_msg_List')}}">Messages</a></li>
-                    <li class="d-block nav-item"><a href="#">Appointments</a></li>
+                    <li class="d-block nav-item"><a href="{{route('appointments_List')}}">Appointments</a></li>
                     <li class="d-block nav-item"><a href="#">Link 4</a></li>
                 </ul>
             </div>

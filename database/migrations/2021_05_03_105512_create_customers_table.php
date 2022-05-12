@@ -23,6 +23,7 @@ class CreateCustomersTable extends Migration
             $table->string('time')->nullable();
             $table->string('phone')->nullable();
             $table->string('Day')->nullable();
+            $table->string('status')->nullable();
 
             $table->index('barber_id');
             $table->index('user_id');

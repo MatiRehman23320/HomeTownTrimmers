@@ -18,4 +18,8 @@ class customers extends Model
     {
         return $this->hasMany(User::class, 'barber_id');
     }
+    public function User()
+    {
+        return $this->hasMany(User::class, 'id');
+    }
 }

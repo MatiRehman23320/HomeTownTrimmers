@@ -64,5 +64,9 @@ Route::get('/reply','HomeController@reply')->name('reply');
 Route::POST('/barber_reply/{id}','HomeController@barber_replied')->name('barber.replied');
 Route::get('/sendmailto_barber','HomeController@sendmail')->name('sendmailto_barber');
 Route::get('/services','HomeController@viewServices')->name('services');
+Route::get('/barberslist','HomeController@viewbarberslist')->name('barberslist')->middleware('role:customer');
+Route::get('/appointments_List','HomeController@viewappointments_List')->name('appointments_List')->middleware('role:barber');
+
+
 
 
