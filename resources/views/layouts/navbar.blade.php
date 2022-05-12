@@ -19,12 +19,19 @@
 										<span class="sub-nav-toggler"></span>
 									</a>
 								</li>
-							
+
 								<li class="nav-item">
 									<a class="nav-link"href="{{ route('services') }}">Services
 										<span class="sub-nav-toggler"></span>
 									</a>
 								</li>
+                                @if(Auth::user()->role=='customer')
+                                <li class="nav-item">
+									<a class="nav-link"href="{{ route('barberslist') }}">Barbers List
+										<span class="sub-nav-toggler"></span>
+									</a>
+								</li>
+                                @endif
 								<li class="nav-item">
 									<a class="nav-link" href="#">Blog
 										<span class="sub-nav-toggler"></span>
@@ -70,7 +77,7 @@
 
 				</div>
 			</nav>
-			
+
 
 		</div>
 	</div>

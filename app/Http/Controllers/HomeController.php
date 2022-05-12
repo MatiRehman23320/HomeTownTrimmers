@@ -6,8 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\barbers;
 use App\barber_reply;
-use App\Mail\sendMail;
-use Illuminate\Support\Facades\Mail;
+use App\User;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -148,5 +147,21 @@ class HomeController extends Controller
 
         return view('services');
 
+    }
+    public function viewbarberslist(){
+        $barbers= barbers::all();
+        return view('customer.barberslist',compact('barbers'));
+
+    }
+    public function viewappointments_List(){
+        $user_id=Auth::user()->id;
+        $barber=barbers::where('user_id',$user_id)->get();
+        foreach($barber as $apointment){
+        $appointments= customers::with('User')->where('barber_id',$apointment->id);
+        }
+        $no_of_pending=$appointments->count();
+        $pending_appointments=$appointments->get();
+
+        return view('barber.appointments_List',compact('pending_appointments','no_of_pending'));
     }
 }
