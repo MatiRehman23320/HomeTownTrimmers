@@ -69,7 +69,7 @@ Messages-Barber
     @include('layouts.sidebar')
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-        <h2 class="mb-4">Pending Appointments!</h2>
+        <h2 class="mb-4">CHAT BOX!</h2>
         @if($msg_count==0)
             <div class="alert-appintment">
                 <span class="closebtn-appintment" onclick="this.parentElement.style.display='none';">&times;</span>

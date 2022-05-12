@@ -18,8 +18,26 @@
 <!-- Main JS -->
 <script src="{{ asset('assets') }}/js/main.js"></script>
 
+<script>
+    $(document).ready(function () {
+            $('#datepicker').fdatepicker({format: 'dd-mm-yyyy'});
+            $("#image").change(function(){
+                    readURL(this);
+                });
+        });
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    console.log(e);
+                    $('img.profile-logo.img.img-thumbnail').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
     @section('footer_script')
-		
+
 
 	@show
 

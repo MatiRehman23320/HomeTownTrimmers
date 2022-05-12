@@ -3,6 +3,13 @@
     <!-- Header Area -->
 
     <nav id="sidebar">
+        <div class=" mt-2 profile text-center">
+            <img src="{{URL::asset('/image/profile.png')}}" style="width: 100px;height: 100px;margin-left: 35;" class="rounded-circle d-inline-block" alt="">  <!-- Button trigger modal -->
+            <button type="button" class="mt-2 btn btn-warning" data-toggle="modal" data-target="#profileModal">
+                <i class="fas fa-user"></i>
+            </button>
+            <h3 class="name text-uppercase text-warning">{{ Auth::user()->name }}</h3>
+        </div>
         <div class="p-4 pt-5">
             <div class="vertical-menu">
                 <ul>
