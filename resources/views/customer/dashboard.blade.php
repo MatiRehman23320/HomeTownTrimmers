@@ -52,12 +52,12 @@
         <div class="hero-area-content">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-12 wow fadeInUp animated" data-wow-delay=".3s">
+                    <div class="col-lg-12 wow fadeInUp animated" data-wow-delay=".10s">
                         <div class="section-title">
                             <h1>Hire the best<br> barbers in Town.</h1>
                             <p> Professional Beauty Services at Home <br> just on single click.</p>
                         </div>
-                        <a href="{{route('barberreply')}}" class="main-btn transparent">Learn More</a>
+                        <a href="{{route('barberreply')}}" class="main-btn transparent">Barber Reply</a>
                         <a href="{{route('Book_appointment')}}" class="main-btn">Book appointment </a>
                     </div>
                 </div>

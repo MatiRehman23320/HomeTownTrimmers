@@ -79,6 +79,10 @@ class HomeController extends Controller
         return view('barber.view_post',compact('post_history','post_count'));
 
     }
+    public function barber_view_post($id){
+        $info= barbers::where('id',$id)->get();
+        return view('barber.shopview',compact('info'));
+    }
     public function chat($id){
         $chat=barbers::where('id',$id)->get();
         return view('customer.msg',compact('chat'));
@@ -123,18 +127,16 @@ class HomeController extends Controller
          return view('customer.reply',compact('reply'));
      }
      public function barberreply(Request $request){
-        //  return $cus_id;
         $id=Auth::user()->id;
         $customer_id= customers::where('user_id',$id)->get()->first();
         if(isset($customer_id)){
-            $barber_reply_to_customer=Barber_reply::where('customer_id',$customer_id->id)->get()->first();
+            $barber_reply_to_customer=Barber_reply::where('customer_id',$id)->get()->first();
             if(isset($barber_reply_to_customer)){
                 return view('customer.barber_reply',compact('barber_reply_to_customer'));
             }
         }
      }
      public function barber_replied($cus_id ,Request $request){
-
         $reply = new Barber_reply();
         $reply->barber_reply=$request->barber_reply;
         $reply->customer_id=$cus_id;
