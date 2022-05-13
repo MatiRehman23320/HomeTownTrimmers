@@ -32,7 +32,7 @@
                                     <img  src="{{ asset(Storage::url($i->file)) }}" style="width:auto; height:100px">
                                         <h5 class="card-title">{{$i->Shop_Name}}</h5>
                                         <p class="card-text">{{$i->address}}</p>
-                                        <a href="{{route('view',$i->id)}}" class="btn btn-primary"><i class="fas fa-eye"></i>View</a>
+                                        <a href="{{route('barber.view',$i->id)}}" class="btn btn-primary"><i class="fas fa-eye"></i>View shop</a>
                                         <a href="{{route('edit_post_show',$i->id)}}" class="btn btn-primary"><i class="fas fa-plus"></i>Edit</a>
                                 </div>
                             </div>

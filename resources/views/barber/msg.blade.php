@@ -100,7 +100,7 @@ Messages-Barber
                                 <div class="container mt-3 my-5">
                                     <div class="row mt-3">
                                         <div class="col">
-                                            <form class="kt-form" id="permit_by" action="{{ route('barber.replied',$item->id) }}" method="POST"  enctype="multipart/form-data">
+                                            <form class="kt-form" id="permit_by" action="{{ route('barber.replied',$item->user_id) }}" method="POST"  enctype="multipart/form-data">
                                                 <div class="container">
                                                     {{ csrf_field() }}
                                                     <div class="form-group">

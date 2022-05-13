@@ -39,6 +39,7 @@ Route::post('store','HomeController@store')->name('store');
 Route::post('Find','HomeController@find')->name('Find');
 Route::get('post','HomeController@post')->name('post');
 Route::get('view_post','HomeController@view_post')->name('view_post');
+Route::get('barber/view/{id}','HomeController@barber_view_post')->name('barber.view');
 //Route::post('store','customers@store')->name('store');
 
 Route::get('/nearest_Barbers', function () {
